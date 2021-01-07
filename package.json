@@ -39,5 +39,52 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "bit": {
+    "env": {
+      "compiler":{ "bit.envs/compilers/react-typescript@3.1.64": {
+        "rawConfig":{
+          "compilerPath": "typescript/bin/tsc",
+          "compilerArguments": ["--declaration"],
+          "compiledFileTypes": [".ts", ".tsx"],
+          "configFileName": "tsconfig.json",
+          "development": false,
+          "copyPolicy": {
+            "ignorePatterns": ["package.json", "package-lock.json", "tsconfig.json"],
+            "disable": false
+          },
+          "tsconfig": {
+            "compilerOptions": {
+              "target": "es5",
+              "lib": [
+                "dom",
+                "dom.iterable",
+                "esnext"
+              ],
+              "allowJs": true,
+              "skipLibCheck": true,
+              "esModuleInterop": true,
+              "allowSyntheticDefaultImports": true,
+              "strict": true,
+              "forceConsistentCasingInFileNames": true,
+              "noFallthroughCasesInSwitch": true,
+              "module": "esnext",
+              "moduleResolution": "node",
+              "resolveJsonModule": true,
+              "isolatedModules": true,
+              "noEmit": true,
+              "baseUrl": "src"
+            }
+          }
+        }
+      }}
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm",
+    "resolveModules": {
+      "modulesDirectories": [
+        "./src"
+      ]
+    }
   }
 }
