@@ -4,4 +4,6 @@ To reproduce bug:
 
 clone repo
 
+run `npm i`
+
 run `bit tag app`
